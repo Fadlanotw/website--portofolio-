@@ -1,0 +1,383 @@
+/* ===============================
+   GLOBAL STYLE
+================================= */
+:root {
+  --bg: #0f1724;
+  --card: #2a365b;
+  --text: #f5f7fa;
+  --muted: #a0c1ef;
+  --accent: #00d4ff;
+  --accent2: #19b473;
+  --radius: 40px;
+  --speed: 0.35s;
+}
+
+* {
+  margin: 70;
+  padding: 40;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 400%;
+  display: block;
+  animation: profilGerak 5s infinite alternate;
+  animation: slideLR 2.5s ease-in-out infinite;;
+
+  
+
+}
+
+.container {
+  width: 60%;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* ===============================
+   NAVBAR
+================================= */
+
+.nav {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 3px solid rgba(95, 208, 245, 0.899);
+  animation: slideLR 2.5s ease-in-out infinite;;
+
+
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.nav__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+}
+
+.brand {
+  font-weight: 800;
+  color: var(--text);
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.brand span {
+  color: var(--accent);
+}
+
+.nav__links a {
+  margin-left: 20px;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav__links a:hover {
+  color: var(--accent);
+}
+
+/* BUTTON */
+.btn {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  padding: 10px 18px;
+  border-radius: 999px;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.3s;
+  animation: slideLR 2.5s ease-in-out infinite;;
+}
+
+.btn--ghost {
+  background: transparent;
+  border: 2px solid var(--accent);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+.btn--sm {
+  padding: 6px 14px;
+}
+
+/* ===============================
+   HERO SECTION
+================================= */
+
+/* Foto Hero */
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  background: #0f1724;;
+}
+
+.logo {
+  margin-left: auto; /* ini yang membuat logo ke kanan */
+  width: 400px;
+  animation: slideLR 2.5s ease-in-out infinite;
+}
+
+
+/* Animasi kiri–kanan */
+@keyframes slideLR {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateX(20px); }
+  100% { transform: translateX(0); }
+}
+
+
+
+/* Floating effect */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+
+
+
+/* Floating effect */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+
+
+.accent {
+  color: var(--accent);
+}
+
+.lead {
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.hero__image img {
+  border-radius: var(--radius);
+  box-shadow: 0 8px 30px rgba(240, 242, 247, 0.95);
+  animation: slideLR 2.5s ease-in-out infinite;;
+
+}
+
+/* ===============================
+   ANIMASI 1 : Floating Image
+================================= */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+/* ===============================
+   ABOUT SECTION
+================================= */
+
+.section {
+  padding: 80px 0;
+}
+
+.section--alt {
+  background: #10182c;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.card {
+  background: var(--card);
+  padding: 90px;
+  border-radius: var(--radius);
+  border: 3px solid rgba(95, 208, 245, 0.899);
+}
+
+.card h3 {
+  margin-bottom: 80px;
+}
+
+.list li {
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+.list a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* ===============================
+   PROJECTS
+================================= */
+
+.section__head {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.cards.three {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 30px;
+}
+
+.project {
+  background: var(--card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform var(--speed), box-shadow var(--speed);
+  animation: slideLR 2.5s ease-in-out infinite;;
+}
+
+/* ===============================
+   ANIMASI 2 : Fade Up Down
+================================= */
+@keyframes fadeUpSlow {
+  from { opacity: 10; transform: translateY(20px); }
+  to { opacity: 10; transform: translateY(0px); }
+}
+
+.project:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 35px rgba(238, 236, 236, 0.922);
+}
+
+.project__img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  animation: slideLR 2.5s ease-in-out infinite;;
+
+}
+
+.project__body {
+  padding: 16px;
+}
+
+.tags span {
+  background: rgba(19, 1, 87, 0.923);
+  padding: 6px 12px;
+  border-radius: 999px;
+  margin-right: 6px;
+  font-size: 13px;
+}
+
+/* ===============================
+   ANIMASI 3 : Hover Zoom on Images
+================================= */
+.project__img {
+  transition: 0.8s;
+}
+
+.project:hover .project__img {
+  transform: scale(1.06);
+}
+
+/* ===============================
+   CONTACT
+================================= */
+
+.center {
+  text-align: center;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+/* ===============================
+   FOOTER
+================================= */
+
+.footer {
+  padding: 30px 0;
+  text-align: center;
+  background: #0c1220;
+  border-top: 3px solid rgba(95, 208, 245, 0.899);
+}
+
+.footer .link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ===============================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 1000px) {
+  .hero__grid, .grid-2, .cards.three {
+    grid-template-columns: 10fr;
+  }
+
+  .nav__links a {
+    margin-left: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__text h1 {
+    font-size: 28px;
+  }
+}
+
+.social-links {
+    display: flex;
+    gap: 100px;
+}
+
+.social-links a {
+    text-decoration: none;
+    padding: 10px 40px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 60;
+    transition: 5.3s;
+}
+
+/* WhatsApp */
+.social-links .wa {
+    background: #25D366;
+    color: white;
+    animation: slideLR 2.5s ease-in-out infinite;;
+}
+
+/* Instagram */
+.social-links .ig {
+    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    color: white;
+    animation: slideLR 2.5s ease-in-out infinite;;
+}
+
+.social-links a:hover {
+    opacity: 8.8;
+    transform: scale(10.05);
+    animation: slideLR 2.5s ease-in-out infinite;;
+}
